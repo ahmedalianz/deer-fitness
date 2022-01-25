@@ -1,0 +1,35 @@
+.footer-bottom {
+    background-color: #000000;
+    padding: 50px 70px;
+    color: rgb(255, 255, 255)
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+}
+
+.links a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin: 5px 0;
+}
+
+.footer-bottom .feedback button {
+    outline: none;
+    border: none;
+    color: #000000;
+    padding: 8px 20px;
+    border-radius: 10px;
+
+}
+
+@media screen and (max-width: 768px) {
+    .footer-bottom {
+        padding: 30px 20px;
+    }
+
+    .footer-bottom .col {
+        margin-bottom: 50px
+    }
+}

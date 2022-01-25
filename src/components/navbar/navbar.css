@@ -1,0 +1,62 @@
+.top-navbar {
+    font-weight: 500;
+    height: 70px;
+    background-color: white;
+}
+
+.logo img {
+    width: 90px;
+}
+
+.log-in {
+    color: black;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+#basic-navbar-nav {
+    z-index: 5;
+}
+
+.log-in:hover {
+    background-color: black;
+    color: white;
+}
+
+.top-navbar button {
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.navbar-nav .nav-link.user {
+    position: relative;
+    bottom: -10px;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar-nav .nav-link.cart {
+        position: relative;
+        bottom: -7px;
+    }
+
+    .navbar-nav .nav-link.lang {
+        position: relative;
+        bottom: -7px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-nav .nav-link span {
+        display: none;
+    }
+
+    .navbar-nav {
+        background-color: white;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.226);
+        padding: 20px;
+        border-radius: 10px;
+        align-items: center;
+    }
+}

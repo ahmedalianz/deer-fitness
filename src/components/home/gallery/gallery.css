@@ -1,0 +1,30 @@
+.gallery h1 {
+    text-align: center;
+    font-size: 50px;
+    padding: 50px;
+    font-weight: bold;
+}
+
+.gallery .images-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery .images-cont div img {
+    width: 100%;
+}
+
+@media screen and (max-width:426px) {
+    .gallery .images-cont .ri-trigger {
+        width: 150px;
+        height: 150px
+    }
+}
+
+@media screen and (max-width:320px) {
+    .gallery .images-cont .ri-trigger {
+        width: 200px;
+        height: 200px
+    }
+}

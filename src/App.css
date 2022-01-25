@@ -1,0 +1,23 @@
+.bold {
+    font-weight: bold;
+}
+
+.m-top-100 {
+    margin-top: 100px
+}
+
+.p-top-100 {
+    padding-top: 100px
+}
+
+.p-top-50 {
+    padding-top: 50px
+}
+
+.back-grad {
+    background: linear-gradient(to bottom, #fef8e9 2%, white 98%);
+}
+
+.mainColor {
+    color: #a99156
+}

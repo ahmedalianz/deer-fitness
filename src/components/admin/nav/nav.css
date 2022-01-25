@@ -1,0 +1,14 @@
+.top-admin-navbar {
+    font-weight: 500;
+    height: 70px;
+    background-color: rgb(240, 240, 240);
+}
+
+.top-admin-navbar a {
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+
+}

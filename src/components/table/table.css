@@ -1,0 +1,26 @@
+.table-cont h1 {
+    text-align: center;
+    font-size: 50px;
+    padding: 50px;
+    font-weight: bold;
+}
+
+.table-cont {
+    padding-bottom: 50px
+}
+
+.my-table {
+    max-width: 1200px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.table-cont {
+    background-image: url(./back2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+}

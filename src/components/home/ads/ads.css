@@ -1,0 +1,12 @@
+.ads .swiperSlide div img {
+    width: 100%;
+    max-height: 720px;
+}
+
+.ads {
+    padding: 50px 0;
+}
+
+.ads .swiperSlide div {
+    width: 100%;
+}
