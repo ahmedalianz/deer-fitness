@@ -94,7 +94,7 @@ input[type=reset]:active {
     -ms-transform: scale(0.95);
     transform: scale(0.95);
 }
-
+input[type=string],
 input[type=email],
 input[type=password] {
     background-color: #f6f6f6;
@@ -116,7 +116,7 @@ input[type=password] {
     -webkit-border-radius: 5px 5px 5px 5px;
     border-radius: 5px 5px 5px 5px;
 }
-
+input[type=string]:focus,
 input[type=email]:focus,
 input[type=password]:focus {
     background-color: #fff;
@@ -240,6 +240,9 @@ input[type=text]:placeholder {
 }
 
 /* Simple CSS3 Fade-in Animation */
+.underlineHover{
+    text-decoration: none;
+}
 .underlineHover:after {
     display: block;
     left: 0;

@@ -5,6 +5,7 @@ import Gallery from '../components/home/gallery/gallery';
 import Ads from '../components/home/ads/ads';
 import Location from '../components/home/location';
 import Services from '../components/home/services/services'
+
 export default function Home() {
     return (
         <div>

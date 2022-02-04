@@ -10,7 +10,15 @@ export default function Footer() {
     }
     return (
         <Row className='footer-bottom'>
-            <Col>
+            <div className='d-flex justify-content-between align-items-center'>
+                <h1>
+                    لياقة الغزال
+                </h1>
+                <h1>
+                    Deer-Fitness
+                </h1>
+            </div>
+            {/* <Col>
                 <h3>
                     روابط مهمه
                 </h3>
@@ -56,7 +64,7 @@ export default function Footer() {
                         </button>
                     </Form>
                 </div>
-            </Col>
+            </Col> */}
         </Row>
     )
 }

@@ -20,8 +20,7 @@ export default function SingleClass() {
     }, [])
     const removePerson = async (p) => {
         try {
-            // const x = await axios('https://geolocation-db.com/json/')
-            const res = await axios.patch(`https://evening-meadow-95836.herokuapp.com/class/removePerson/${id}/${p._id}`)
+            const res = await axios.patch(`https://evening-meadow-95836.herokuapp.com/class/removePerson/${id}/${p.id}`)
             setClazz(res.data.data)
             toast.success('تم حذف الشخص المسجل')
         } catch (err) {

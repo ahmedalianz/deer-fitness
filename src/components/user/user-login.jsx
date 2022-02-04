@@ -1,21 +1,20 @@
-import './admin.css'
 import axios from 'axios'
 import { useState } from 'react'
-
+import { Link } from 'react-router-dom'
 export default function Admin() {
-    const [email, setEmail] = useState('')
+    const [phone, setPhone] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState('')
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('https://evening-meadow-95836.herokuapp.com/admin/loginAdmin', { email, password })
-            sessionStorage.setItem('admin', true)
-            window.location.assign("/admin");
+            let res = await axios.post('https://evening-meadow-95836.herokuapp.com/admin/LoginUser', { phone, password })
+            localStorage.setItem('user', JSON.stringify(res.data.data))
+            window.location.assign("/");
         }
         catch (e) {
             console.log(e)
-            setError("غير مصرح لك بالدخول")
+            setError("الهاتف او الرقم السري غير صحيح")
         }
     }
     return (
@@ -28,7 +27,7 @@ export default function Admin() {
                 </div>
 
                 <form onSubmit={e => handleSubmit(e)}>
-                    <input required value={email} onChange={e => setEmail(e.target.value)} type="email" id="login" className="fadeIn second" name="login" placeholder="الحساب" />
+                    <input required value={phone} onChange={e => setPhone(e.target.value)} type="string" id="login" className="fadeIn second" name="login" placeholder="الهاتف" />
                     <input required value={password} onChange={e => setPassword(e.target.value)} type="password" id="password" className="fadeIn third" name="login" placeholder="الرقم السري" />
                     <div className="text-danger">{error}</div>
                     <input type="submit" className="fadeIn fourth" value="تسجيل الدخول" />
@@ -36,7 +35,7 @@ export default function Admin() {
 
 
                 <div id="formFooter">
-                    <a className="underlineHover" href="#">هل نسيت كلمه المرور؟</a>
+                    <Link to='/register' className="underlineHover">اذا لم تكوني مسجلة لدينا يمكنك التسجيل من هنا</Link>
                 </div>
 
             </div>

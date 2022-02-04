@@ -4,7 +4,8 @@ import { useEffect, useState } from "react"
 import MyVerticallyCenteredModal from './modal'
 import axios from "axios"
 import Loader from "react-loader-spinner";
-
+import { toast } from "react-toastify"
+import { useNavigate } from "react-router-dom";
 export default function Reserve({ url, img, period, morn }) {
     const [classes, setClasses] = useState([])
     const [modalShow, setModalShow] = useState(false);
@@ -24,14 +25,17 @@ export default function Reserve({ url, img, period, morn }) {
             try {
                 const res = await axios(url)
                 setClasses(res.data.data)
-                setTimeout(() => {
-                    setLoader('لايوجد كلاسات متاحة الان حاولي مره اخري')
-                }, 5000)
             } catch (err) {
                 console.log(err)
             }
         }
         getClasses()
+    }, [])
+    useEffect(() => {
+        setTimeout(() => {
+            setLoader('لايوجد كلاسات متاحة الان حاولي مره اخري')
+        }, 10000)
+
     }, [])
     useEffect(() => {
         const d = new Date();
@@ -75,9 +79,18 @@ export default function Reserve({ url, img, period, morn }) {
             }
         }
     }, [])
+    let user = localStorage.getItem('user')
+    let navigate = useNavigate();
     const handleReserve = (mClass) => {
-        setModalContent(mClass)
-        setModalShow(true)
+        if (user) {
+            setModalContent(mClass)
+            setModalShow(true)
+        } else {
+            toast.info('برجاء التسجيل اولا ليمكنك الحجز')
+            setTimeout(() => {
+                navigate('/register')
+            }, 2000)
+        }
     }
     return classes.length > 0 ? (
         <Container className='reserve'>
