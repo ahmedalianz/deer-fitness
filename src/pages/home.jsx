@@ -10,7 +10,7 @@ export default function Home() {
     return (
         <div>
             <Hero />
-            <div className="offers">
+            {/* <div className="offers">
                 <Fade left>
                     <Reserve
                         url='https://evening-meadow-95836.herokuapp.com/class/showMClass'
@@ -27,7 +27,7 @@ export default function Home() {
                         morn={false}
                     />
                 </Fade>
-            </div>
+            </div> */}
             <Ads />
             <Services />
             <Gallery />
